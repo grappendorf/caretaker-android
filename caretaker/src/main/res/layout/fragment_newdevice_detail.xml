@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingRight="@dimen/activity_horizontal_margin"
+              android:paddingTop="@dimen/activity_vertical_margin"
+              android:paddingBottom="@dimen/activity_vertical_margin"
+              tools:context=".MainActivity"
+              android:orientation="vertical"
+              android:id="@+id/layout1">
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/device_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/switch_device"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp">
+
+      <net.grappendorf.caretaker.util.AutoResizeTextView
+          android:id="@+id/device_description"
+          android:text="Device Type"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <com.iangclifton.android.floatlabel.FloatLabel
+      android:id="@+id/device_name"
+      android:hint="Device Name"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dip"/>
+
+  <com.iangclifton.android.floatlabel.FloatLabel
+      android:id="@+id/device_uuid"
+      android:hint="Device UUID (default: MAC-Address)"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dip"/>
+
+  <TextView
+      android:id="@+id/label3"
+      android:text="Select Your WLAN Network"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dip"
+      android:layout_marginBottom="8dip"/>
+
+  <Spinner
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/wlan_ssid"/>
+
+  <com.iangclifton.android.floatlabel.FloatLabel
+      android:id="@+id/wlan_phrase"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dip"
+      android:password="true"
+      android:hint="Enter Your WPA2 Shared Key"/>
+
+  <Button
+      android:id="@+id/configure"
+      android:text="Configure"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:drawableLeft="@drawable/apply"
+      android:layout_marginTop="32dip"
+      android:background="@drawable/buttonshape"
+      android:gravity="center"
+      />
+
+</LinearLayout>

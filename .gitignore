@@ -1,0 +1,9 @@
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+/.idea/atlassian-ide-plugin.xml
+.DS_Store
+/build
+*.apk
+*-report.txt
